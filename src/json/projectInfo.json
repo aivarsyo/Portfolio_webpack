@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Living_Landscape",
+        "title": "Living Landscape",
+        "titleColor": "#47824A",
+        "idea": "The first idea was to build a portfolio for Copenhagen based artist, so that it appeals more people and overall just gives a better impression. But as there was upcoming exhibition in collaboration with other professionals, we went for dedicating a digital solution for this event and informing people about it's existence.",
+        "result": "The exhibition is called “Living Landscape?” and it consists of installation in a mountain's form, it's made out of plastic and cleaning materials to represent the amount of plastic that is in our nature. Website shows the insights of making this exhibition.",
+        "buttonLink": "http://aivars.dk/Living_Landscape/"
+    },
+    {
+        "name": "Disney_Characters",
+        "title": "Disney Characters",
+        "titleColor": "#9C6AE5",
+        "idea": "Dynamic website for a lot of content, so that the customer in the future could modify it himself using Google sheets.",
+        "result": "Final result shows categorised Disney characters and different kind of information about each of them.",
+        "buttonLink": "http://aivars.dk/dynamic_web_disney/"
+    },
+    {
+        "name": "Bike_Guide",
+        "title": "Bike Guide",
+        "titleColor": "#000C2E",
+        "idea": "To create a site with information about cycling in Copenhagen based on the 'I Bike CPH' Brochure for a specific target group. Has the video a group produces, as well relevant stills that have been made in the process.",
+        "result": "Explains the biking culture in Copenhagen and site works as a great guide for anyone new in the city.",
+        "buttonLink": "http://lasmaoficiere.com/bikeguide/intro.html"
+    },
+    {
+        "name": "Student_App",
+        "title": "Student App",
+        "titleColor": "#C65F54",
+        "idea": "To create a native student app prototype for mobile devices by considering what could be useful for the target audience and how the UX would play the role.",
+        "result": "App offers five sections with different sub-sections, so that new and current students could get all the necessary news and information.",
+        "buttonLink": "https://xd.adobe.com/view/ecf6d3cc-d6b7-4a1e-737c-70b0f361321f-9ac7/?fullscreen&hints=off"
+    },
+    {
+        "name": "Huset_KBH",
+        "title": "Huset KBH",
+        "titleColor": "black",
+        "idea": "To create a digital solution which is based on Wordpress backend, meaning it's admin friendly for customer to modify at any time without a help from the creator.",
+        "result": "By following 'HUSET' style, it was taken in consideration how the site should look like, so that it represents the places they have in Copenhagen. As the original site's structure was open for improvement, there was made changes, so that UX improve it's quality.",
+        "buttonLink": "http://aivars.dk/wordpress_website/HUSET-by-Aivars/"
+    },
+    {
+        "name": "Ford_T_Car",
+        "title": "Ford T Car",
+        "titleColor": "#B3A88D",
+        "idea": "To learn how to implement SVG elements in the website and learn the animations, as well how to include frameworks in the workflow.",
+        "result": "Site is meant for tablets to be shown as interactive activity in the science museum by keeping in mind that target audience is families with children. This is a basic solution for that by showing how the information about specific topic could be merged together with animations.",
+        "buttonLink": "http://aivars.dk/frontend/svgAnimationProject/dist/"
+    },
+    {
+        "name": "FooBar",
+        "title": "FooBar",
+        "titleColor": "#FFBE5C",
+        "idea": "To create a dashboard which displays the current situation in the bar and will be displayed on a big screen behind the bartenders next to a menu. As well to have an application for tablets placed on the bar tables and by using them customers will make the order.",
+        "result": "By using multiple prototypes both applications were made using JSON application given from the teachers which generates the data automatically and using our own functions updates the information in real time without refreshing the application itself.",
+        "buttonLink": "http://aivars.dk/frontend/FooBar_Split/index.html"
+    }
+]

@@ -1,0 +1,6 @@
+images/
+name/
+button/
+node_modules/
+dist/
+.cache/

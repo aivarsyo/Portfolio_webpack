@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "circleFill": "#ABF5FF",
+        "lottieSrc": "https://assets6.lottiefiles.com/packages/lf20_umBOmV.json",
+        "workTitle": "Living<br> Landscape",
+        "bodyBck": "#47824A",
+        "aHref": "Living_Landscape"
+    },
+    {
+        "id": 1,
+        "circleFill": "#E6E16A",
+        "lottieSrc": "https://assets2.lottiefiles.com/datafiles/9jXnRMnGVD942L2/data.json",
+        "workTitle": "Disney<br> Characters",
+        "bodyBck": "#9C6AE5",
+        "aHref": "Disney_Characters"
+    },
+    {
+        "id": 2,
+        "circleFill": "#FCE3DF",
+        "lottieSrc": "https://assets9.lottiefiles.com/packages/lf20_K1vQB6.json",
+        "workTitle": "Bike<br> Guide",
+        "bodyBck": "#000C2E",
+        "aHref": "Bike_Guide"
+    },
+    {
+        "id": 3,
+        "circleFill": "#1B7A48",
+        "lottieSrc": "https://assets8.lottiefiles.com/packages/lf20_Ci6Gbc.json",
+        "workTitle": "Student<br> App",
+        "bodyBck": "#C65F54",
+        "aHref": "Student_App"
+    },
+    {
+        "id": 4,
+        "circleFill": "yellow",
+        "lottieSrc": "https://assets2.lottiefiles.com/packages/lf20_3SA6yI.json",
+        "workTitle": "Huset<br> KBH",
+        "bodyBck": "black",
+        "aHref": "Huset_KBH"
+    },
+    {
+        "id": 5,
+        "circleFill": "#7B8AB3",
+        "lottieSrc": "https://assets10.lottiefiles.com/packages/lf20_FizrwJ.json",
+        "workTitle": "Ford<br> T Car",
+        "bodyBck": "#B3A88D",
+        "aHref": "Ford_T_Car"
+    },
+    {
+        "id": 6,
+        "circleFill": "#1D72B3",
+        "lottieSrc": "https://assets7.lottiefiles.com/temp/lf20_YbXgAc.json",
+        "workTitle": "FooBar",
+        "bodyBck": "#FFBE5C",
+        "aHref": "FooBar"
+    }
+]

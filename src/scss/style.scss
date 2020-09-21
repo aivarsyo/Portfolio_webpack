@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;800&display=swap');
+// Required Core Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+body{
+  margin: 0;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+header{
+  top: 0;
+  position: relative;
+  height: 10vh;
+}
+
+.topnav {
+  overflow: hidden;
+  height: 10vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.topnav a:hover {
+  color: red;
+}
+
+.topnav a.active {
+  color:blue;
+}
+
+#bodyHome{
+  color: white;
+  background-color: rgb(0, 12, 46);
+}
+
+#bodyHome > header > .topnav a {
+  color: white;
+}
+
+#bodyHome > header > .topnav a:hover {
+  color: red;
+}
+
+#bodyHome > header > .topnav a.active {
+  color: yellow;
+}
+
+
+#homeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 90vh;
+}
+
+#nameSvg{
+  width: 300px;
+}
+
+#homeContainer > p:nth-child(2){
+  font-size: 14vw;
+  margin: 0;
+}
+
+#homeContainer > p:nth-child(3){
+  align-self: flex-start;
+  margin: 0;
+}
+
+#skills{
+  font-weight: 800;
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+#homeContainer > lottie-player{
+  width: 300px;
+  height: 300px;
+}
+
+#skillsUno{
+  display: none;
+}
+
+#skillsDos{
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+
+  #homeContainer{
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+  }
+
+  #nameSvg{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 350px;
+  }
+
+  #homeContainer > p:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 50px;
+  }
+
+  #homeContainer > lottie-player {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  #skills{
+    display: none;
+  }
+
+  #skillsUno{
+    display: block;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    font-weight: 800;
+  }
+
+  #skillsDos{
+    display: block;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    font-weight: 800;
+  }
+}
+
+  // ----------------------------------------
+
+#bodyWorks > header{
+  position: absolute;
+}
+
+  #worksContainer{
+    background-color: #47824A;
+    width: 100vw;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.glide__slide{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  place-content: center;
+  height: 85vh;
+}
+
+.glide__slide > svg{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 80vh;
+  width: 100vw;
+}
+
+lottie-player{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100vw;
+  height: 80vh;
+}
+
+.glide__slide > a{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  place-self: center;
+  z-index: 1;
+  color: white;
+  font-size: 14vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+.glide__bullets{
+ display: flex;
+ flex-direction: row;
+ width: 80vw;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.glide__bullet--active{
+  width: 20px;
+    height: 20px;
+}
+
+.glide__arrows{
+  display: none;
+}
+
+.glide__arrow{
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 70px;
+}
+
+.glide__arrow:hover{
+  animation: scaleEye 0.5s forwards;
+}
+
+@keyframes scaleEye{
+  to{
+    width: 100px;
+  }
+}
+
+#bodyWorks > header > .topnav a {
+  color: white;
+}
+
+#bodyWorks > header > .topnav a:hover {
+  color: black;
+}
+
+#bodyWorks > header > .topnav a.active {
+  color: yellow;
+}
+
+@media screen and (min-width: 690px) {
+  .glide__slide > svg{
+    height: 500px;
+  }
+  
+  lottie-player{
+    height: 500px;
+  }
+
+  .glide__slide > a{
+    font-size: 100px;
+  }
+
+  .glide__arrows{
+    display: block;
+  }
+}
+
+// --------------------------------
+
+#descOfWork{
+  margin: 10vw;
+  margin-top: 0vw;
+  grid-column-gap: 10vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+#descOfWork > p:nth-child(1) {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  font-weight: 800;
+  font-size: 14vw;
+  place-self: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#descOfWork > p:nth-child(2) {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-weight: 800;
+}
+
+#descOfWork > p:nth-child(3) {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  font-weight: 800;
+}
+
+#descOfWork > p:nth-child(4) {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+#descOfWork > p:nth-child(5) {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+#underPart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#underPart > img{
+  width: 90vw;
+}
+
+#buttonSvg{
+  width: 50vw;
+  height: 4vh;
+  align-self: flex-end;
+  margin: 10vw;
+}
+
+@media screen and (min-width: 600px) {
+  #descOfWork > p:nth-child(1) {
+    font-size: 80px;
+    margin: 5vh;
+  }
+
+  #underPart > img{
+    width: 50vw
+  }
+
+  #buttonSvg{
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  #descOfWork{
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    margin-bottom: 5vh;
+  }
+
+  #descOfWork > p:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1/5;
+  }
+  
+  #descOfWork > p:nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  
+  #descOfWork > p:nth-child(3) {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+  
+  #descOfWork > p:nth-child(4) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  
+  #descOfWork > p:nth-child(5) {
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+
+  #underPart{
+    justify-content: center;
+  }
+
+  #buttonSvg{
+   align-self: center;
+   margin: 5vh;
+  }
+}
+
+// --------------------------------
+
+#bodyContact{
+  background-color: rgb(0, 12, 46);
+  color: white;
+}
+
+#bodyContact > header > .topnav a {
+  color: white;
+}
+
+#bodyContact > header > .topnav a:hover {
+  color: red;
+}
+
+#bodyContact > header > .topnav a.active {
+  color: yellow;
+}
+
+#aboutContainer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#aboutContainer > lottie-player{
+  align-self: center;
+  width: 300px;
+  height: 300px;
+}
+
+#inTouch{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+#inTouch > a {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 1vh;
+}
+
+@media screen and (min-width: 820px) {
+  #aboutContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 5vw;
+    align-items: center;
+    height: 90vh;
+  }
+
+  #aboutContainer > lottie-player{
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  #aboutText{
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  #inTouch{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: inline-block;
+  }
+
+  #inTouch > a{
+    margin-left: 5vw;
+  }
+
+  #aboutContainer > lottie-player{
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #aboutContainer{
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (min-width: 1295px) {
+  #aboutContainer{
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
