@@ -6,7 +6,6 @@ import carousel from '@glidejs/glide';
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
-
 window.addEventListener("DOMContentLoaded", start);
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -31,7 +30,7 @@ function start() {
 
 async function startHome() {
 
-    let response = await fetch("assets/svg/myName.svg");
+    /* let response = await fetch("./dist/assets/svg/myName.svg");
 
     let mySvgData = await response.text();
 
@@ -39,7 +38,7 @@ async function startHome() {
 
     animateLines();
 
-    animateName();
+    animateName(); */
 
 }
 
