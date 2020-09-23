@@ -44,20 +44,20 @@ header{
   color:blue;
 }
 
-#bodyHome{
+#Home{
   color: white;
   background-color: rgb(0, 12, 46);
 }
 
-#bodyHome > header > .topnav a {
+#Home > header > .topnav a {
   color: white;
 }
 
-#bodyHome > header > .topnav a:hover {
+#Home > header > .topnav a:hover {
   color: red;
 }
 
-#bodyHome > header > .topnav a.active {
+#Home > header > .topnav a.active {
   color: yellow;
 }
 
@@ -154,7 +154,7 @@ header{
 
   // ----------------------------------------
 
-#bodyWorks > header{
+#Works > header{
   position: absolute;
 }
 
@@ -237,15 +237,15 @@ lottie-player{
   }
 }
 
-#bodyWorks > header > .topnav a {
+#Works > header > .topnav a {
   color: white;
 }
 
-#bodyWorks > header > .topnav a:hover {
+#Works > header > .topnav a:hover {
   color: black;
 }
 
-#bodyWorks > header > .topnav a.active {
+#Works > header > .topnav a.active {
   color: yellow;
 }
 
@@ -386,20 +386,20 @@ lottie-player{
 
 // --------------------------------
 
-#bodyContact{
+#About{
   background-color: rgb(0, 12, 46);
   color: white;
 }
 
-#bodyContact > header > .topnav a {
+#About > header > .topnav a {
   color: white;
 }
 
-#bodyContact > header > .topnav a:hover {
+#About > header > .topnav a:hover {
   color: red;
 }
 
-#bodyContact > header > .topnav a.active {
+#About > header > .topnav a.active {
   color: yellow;
 }
 

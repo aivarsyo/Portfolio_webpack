@@ -17,29 +17,21 @@ const urlParams = new URLSearchParams(window.location.search);
 const work = urlParams.get("work");
 
 function start() {
-    if (document.querySelector("body").dataset.title === "home") {
+    if (document.querySelector("body").dataset.title === "Home") {
         startHome();
-    } else if (document.querySelector("body").dataset.title === "works") {
+    } else if (document.querySelector("body").dataset.title === "Works") {
         startWorks();
     } else if (work) {
         startWork();
-    } else if (document.querySelector("body").dataset.title === "about") {
+    } else if (document.querySelector("body").dataset.title === "About") {
         console.log("about");
     }
 }
 
 async function startHome() {
 
-    /* let response = await fetch("./dist/assets/svg/myName.svg");
-
-    let mySvgData = await response.text();
-
-    document.querySelector("#nameSvg").innerHTML = mySvgData;
-
     animateLines();
-
-    animateName(); */
-
+    animateName(); 
 }
 
 function animateLines() {
@@ -96,20 +88,12 @@ function animateName() {
 }
 
 async function startWorks() {
-    fetch('json/slideContent.json')
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data)
-            data.forEach(importSlideData);
-            slideMount(data);
-        });
-
+    
+            slideMount();
 
 }
 
-function slideMount(data) {
+function slideMount() {
     const config = {
         type: carousel,
         perView: 1
@@ -117,7 +101,7 @@ function slideMount(data) {
 
     var glide = new Glide('.glide', config);
 
-    data.forEach(checkSlide);
+    /* data.forEach(checkSlide);
 
     function checkSlide(data) {
         glide.on('run', function () {
@@ -127,7 +111,7 @@ function slideMount(data) {
                 document.querySelector("#worksContainer").style.background = data.bodyBck;
             }
         })
-    }
+    } */
 
     glide.mount();
 }

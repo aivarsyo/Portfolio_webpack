@@ -111,6 +111,12 @@ module.exports = {
             ],
         }),
 
+        new CopyPlugin({
+            patterns: [
+                { from: './src/thumbnail/*.*', to: './thumbnail/', flatten: true },
+            ],
+        }),
+
         new CleanWebpackPlugin()
     ]
 }
