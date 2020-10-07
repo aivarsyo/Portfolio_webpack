@@ -1,9 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;800&display=swap'); */
 // Required Core Stylesheet
 @import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 // Optional Theme Stylesheet
-@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme"; */
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 
 body{
@@ -14,53 +14,14 @@ body{
 header{
   top: 0;
   position: relative;
+  width: 100%;
   height: 10vh;
-}
-
-.topnav {
-  overflow: hidden;
-  height: 10vh;
-  width: 100vw;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.topnav a {
-  color: black;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  z-index: 1;
-  text-transform: uppercase;
-}
-
-.topnav a:hover {
-  color: red;
-}
-
-.topnav a.active {
-  color:blue;
 }
 
 #Home{
   color: white;
   background-color: rgb(0, 12, 46);
 }
-
-#Home > header > .topnav a {
-  color: white;
-}
-
-#Home > header > .topnav a:hover {
-  color: red;
-}
-
-#Home > header > .topnav a.active {
-  color: yellow;
-}
-
 
 #homeContainer{
   display: flex;
@@ -318,6 +279,7 @@ lottie-player{
 
 #underPart > img{
   width: 90vw;
+  max-width: 800px;
 }
 
 #buttonSvg{
@@ -410,10 +372,10 @@ lottie-player{
   margin-right: 5vw;
 }
 
-#aboutContainer > lottie-player{
+#aboutContainer > img{
+  width: 90vw;
+  max-width: 400px;
   align-self: center;
-  width: 300px;
-  height: 300px;
 }
 
 #inTouch{
@@ -438,9 +400,24 @@ lottie-player{
     height: 90vh;
   }
 
-  #aboutContainer > lottie-player{
+  #aboutContainer > img{
     grid-row: 1/2;
     grid-column: 1/2;
+    width: 50vw;
+    max-width: 500px;
+  }
+
+  #aboutContainer > svg{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 50vw;
+    height: 100%;
+    max-width: 500px;
+    border: 2px solid red;
+
+    image{
+      width: 100%;
+    }
   }
 
   #aboutText{
@@ -451,17 +428,11 @@ lottie-player{
   #inTouch{
     grid-column: 1/2;
     grid-row: 2/3;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  #inTouch > a{
-    margin-left: 5vw;
-  }
-
-  #aboutContainer > lottie-player{
-    width: 450px;
-    height: 450px;
-  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -477,15 +448,3 @@ lottie-player{
     margin-right: 15vw;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

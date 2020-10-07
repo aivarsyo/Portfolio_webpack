@@ -21,10 +21,10 @@ function start() {
         startHome();
     } else if (document.querySelector("body").dataset.title === "Works") {
         startWorks();
-    } else if (work) {
-        startWork();
     } else if (document.querySelector("body").dataset.title === "About") {
-        console.log("about");
+        imageAnim();
+    } else {
+        startWork();
     }
 }
 
@@ -88,12 +88,17 @@ function animateName() {
 }
 
 async function startWorks() {
-    
-            slideMount();
+    fetch('http://localhost:8888/Portfolio_webpack/wp-json/wp/v2/pages/13')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            slideMount(data);
+        });
 
 }
 
-function slideMount() {
+function slideMount(data) {
     const config = {
         type: carousel,
         perView: 1
@@ -101,76 +106,21 @@ function slideMount() {
 
     var glide = new Glide('.glide', config);
 
-    /* data.forEach(checkSlide);
+    data.acf.all_my_works.forEach(checkSlide);
 
     function checkSlide(data) {
         glide.on('run', function () {
             var currentIndex = glide.index;
-
-            if (data.id == currentIndex) {
-                document.querySelector("#worksContainer").style.background = data.bodyBck;
+                if (data.button_id == currentIndex) {
+                document.querySelector("#worksContainer").style.background = data.background_color;
             }
         })
-    } */
+    }
 
     glide.mount();
 }
 
-function importSlideData(data) {
-    const li = document.createElement("li");
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    const lottie = document.createElement("lottie-player");
-    const workTitle = document.createElement("p");
-    const a = document.createElement("a");
-
-    li.classList.add("glide__slide");
-    document.querySelector(".glide__slides").appendChild(li);
-
-    li.appendChild(svg);
-    svg.appendChild(circle);
-
-    if (window.innerWidth < 680) {
-        circle.setAttribute("r", "35vw");
-    }
-    else {
-        circle.setAttribute("r", "250px");
-    }
-
-    circle.setAttribute("cx", "50%");
-    circle.setAttribute("cy", "50%");
-    circle.setAttribute("fill", data.circleFill);
-
-    lottie.setAttribute("src", data.lottieSrc);
-    lottie.setAttribute("background", "transparent");
-    lottie.setAttribute("speed", "1");
-    lottie.setAttribute("loop", "");
-    lottie.setAttribute("autoplay", "");
-    li.appendChild(lottie);
-
-    li.appendChild(a);
-    a.href = "work.html?work=" + data.aHref;
-    a.appendChild(workTitle);
-    workTitle.innerHTML = data.workTitle;
-
-}
-
 async function startWork() {
-    let response = await fetch("assets/svg/button.svg");
-
-    let mySvgData = await response.text();
-
-    document.querySelector("#buttonSvg").innerHTML = mySvgData;
-
-    fetch('json/projectInfo.json')
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data)
-            data.forEach(showProject);
-        });
-
     animateButton();
 }
 
@@ -195,19 +145,13 @@ function animateButton() {
     })
 }
 
-function showProject(data) {
+function imageAnim(){
 
-    if (data.name == work) {
-        document.querySelector("#descOfWork > p:nth-child(1)").textContent = data.title;
-        document.querySelector("#descOfWork > p:nth-child(1)").style.color = data.titleColor;
-        document.querySelector("#underPart > img").src = "assets/images/" + data.name + ".png";
-        document.querySelector("#descOfWork > p:nth-child(4)").textContent = data.idea;
-        document.querySelector("#descOfWork > p:nth-child(5)").textContent = data.result;
-        document.querySelector("#buttonSvg").href = data.buttonLink;
-    }
+const image_of_myself_width = document.querySelector(".image_of_myself").offsetWidth;
+console.log(image_of_myself_width);
+
+    gsap.to(".image_of_myself", 4, {
+        delay: 3,
+        x: "100%"
+    })
 }
-
-
-
-
-
