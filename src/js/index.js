@@ -8,13 +8,10 @@ gsap.registerPlugin(TextPlugin);
 
 window.addEventListener("DOMContentLoaded", start);
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+/* // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-const urlParams = new URLSearchParams(window.location.search);
-const work = urlParams.get("work");
+document.documentElement.style.setProperty('--vh', `${vh}px`); */
 
 function start() {
     if (document.querySelector("body").dataset.title === "Home") {
@@ -27,6 +24,9 @@ function start() {
         startWork();
     }
 }
+
+const bck_color = document.querySelector("body").style.backgroundColor;
+console.log(bck_color);
 
 async function startHome() {
 
@@ -147,11 +147,64 @@ function animateButton() {
 
 function imageAnim(){
 
-const image_of_myself_width = document.querySelector(".image_of_myself").offsetWidth;
-console.log(image_of_myself_width);
+    intro();
 
-    gsap.to(".image_of_myself", 4, {
-        delay: 3,
-        x: "100%"
-    })
+    function intro(){
+
+        gsap.from(".image_of_myself_2", 4, {
+            xPercent: -100,
+            delay:2
+        })
+    
+        gsap.to(".image_of_myself_3", 4, {
+            xPercent: 100,
+            delay: 2
+        })
+
+        .then(middle)
+
+    }
+
+    function middle(){
+
+        gsap.to(".image_of_myself_2", 4, {
+            yPercent: -100,
+            delay: 2
+        })
+
+        gsap.from(".image_of_myself", 4, {
+            yPercent: 100,
+            delay: 2
+        })
+
+        .then(conclusion)
+
+    }
+
+    function conclusion(){
+
+        const tl = gsap.timeline();
+
+        tl.fromTo(".image_of_myself_2", 4, {
+            xPercent: -100,
+            yPercent: 0
+        }, {
+            xPercent: 0,
+            delay: 2
+        })
+
+        tl.fromTo(".image_of_myself_3", 4, {
+            xPercent: 0,
+            yPercent: 100
+        }, {
+            yPercent: 0,
+            delay: 2,
+            onComplete: function(){
+                intro();
+            }
+        })
+
+        return tl;
+    }
+
 }

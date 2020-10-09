@@ -6,12 +6,13 @@ get_header();
 
 <div id="aboutContainer">
 
-<svg preserveAspectRatio="xMidYMid slice">
-    <image class="image_of_myself_2" href="<?php the_field( "image_of_myself_2" ) ?>" x="-100%" />
-    <image class="image_of_myself_3" href="<?php the_field( "image_of_myself_3" ) ?>" y="-100%" />
-    <image class="image_of_myself" href="<?php the_field( "image_of_myself" ) ?>"  />
-</svg>
+<div class="imageHolder">
 
+<img class="image_of_myself" src="<?php the_field( "image_of_myself" ) ?>"  />
+<img class="image_of_myself_2" src="<?php the_field( "image_of_myself_2" ) ?>" />
+    <img class="image_of_myself_3" src="<?php the_field( "image_of_myself_3" ) ?>" />
+    
+    </div>
 
             <!-- <img src="<?php the_field( "image_of_myself" ) ?>" alt=""> -->
 

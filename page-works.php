@@ -16,9 +16,7 @@ get_header();
                     <?php while(have_rows("all_my_works")): the_row(); ?>
 
                     <li class="glide__slide">
-                        <svg>
-                            <circle r="250px" cx="50%" cy="50%" fill="<?php the_sub_field("circle_fill") ?>"></circle>
-                        </svg>
+                        <div class="circle" style="background-color: <?php the_sub_field("circle_fill") ?>;"></div>
 
                         <lottie-player src="<?php the_sub_field("lottie_src") ?>" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
 

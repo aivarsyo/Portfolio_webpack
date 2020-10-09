@@ -87,9 +87,9 @@ function cssAutoprefixer() {
 			grid: true
 		})
 	];
-	return gulp.src('./dist/css/*.css')
+	return gulp.src('./style.css')
 		.pipe(postcss(plugins))
-		.pipe(gulp.dest('./dist/css/'));
+		.pipe(gulp.dest('./'));
 }
 
 
@@ -102,9 +102,9 @@ function cssCompress() {
 		}),
 		cssnano()
 	];
-	return gulp.src('./dist/css/*.css')
+	return gulp.src('./style.css')
 		.pipe(postcss(plugins))
-		.pipe(gulp.dest('./dist/css/'));
+		.pipe(gulp.dest('./'));
 }
 
 

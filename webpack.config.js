@@ -96,9 +96,14 @@ module.exports = {
 
     plugins: [
 
-        new MiniCssExtractPlugin({
+        /* new MiniCssExtractPlugin({
             filename: './css/[name].' + PACKAGE.version + '.css',
             chunkFilename: './css/[id].[hash].css'
+        }), */
+
+        new MiniCssExtractPlugin({
+            filename: '../style.css',
+            chunkFilename: '../style.css'
         }),
 
         new CopyPlugin({
